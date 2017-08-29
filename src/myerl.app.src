@@ -1,0 +1,8 @@
+%% -*- mode: erlang; -*-
+{application, myerl,
+ [{description, "Random debug stuff"},
+  {vsn, "0.0.1"},
+  {modules, []},
+  {registered, []},
+  {applications, [kernel, stdlib, tools]},
+  {env, []}]}.

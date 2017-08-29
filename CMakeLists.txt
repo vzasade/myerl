@@ -1,0 +1,3 @@
+REBAR (TARGET myerl)
+ADD_DEPENDENCIES (ns_realclean myerl-clean)
+INSTALL (DIRECTORY ebin DESTINATION "${INST_LIBDIR}/myerl")

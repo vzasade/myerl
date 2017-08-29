@@ -1,0 +1,4 @@
+link to deps
+------------
+cd /Users/artem/work/spock/ns_server/deps
+ln -s /Users/artem/work/cbmisc/projects/myerl
