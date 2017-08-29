@@ -1,0 +1,36 @@
+From cb9642a291a25d76ba737f3a26aab2f15043cb4c Mon Sep 17 00:00:00 2001
+From: Artem Stemkovski <astemkov@gmail.com>
+Date: Tue, 29 Aug 2017 13:57:16 -0700
+Subject: [PATCH] setup myerl dependency
+
+Change-Id: I60188d35bd441fa63c82b2b1d240f4e1226b4e74
+---
+ CMakeLists.txt      | 2 +-
+ deps/CMakeLists.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0332a7d..511cb8d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -133,7 +133,7 @@ ADD_SUBDIRECTORY (deps)
+ REBAR (TARGET ns_server NOCLEAN DEPENDS ns_cfg ale triq meck)
+ 
+ ADD_CUSTOM_TARGET (erlang_deps
+-  DEPENDS gen_smtp ale ns_babysitter ns_ssl_proxy ns_couchdb triq meck)
++  DEPENDS gen_smtp ale ns_babysitter ns_ssl_proxy ns_couchdb triq meck myerl)
+ 
+ ADD_CUSTOM_TARGET (ns_server_all DEPENDS ns_server erlang_deps)
+ 
+diff --git a/deps/CMakeLists.txt b/deps/CMakeLists.txt
+index 9373925..fc9405b 100644
+--- a/deps/CMakeLists.txt
++++ b/deps/CMakeLists.txt
+@@ -6,3 +6,4 @@ ADD_SUBDIRECTORY (ns_couchdb)
+ ADD_SUBDIRECTORY (gocode)
+ ADD_SUBDIRECTORY (triq)
+ ADD_SUBDIRECTORY (meck)
++ADD_SUBDIRECTORY (myerl)
+-- 
+2.7.4 (Apple Git-66)
+
